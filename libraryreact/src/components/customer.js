@@ -2,15 +2,15 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./navbar/navbar";
 
-const Dashboard = () => {
+const Customer = () => {
   return (
     <>
       <Navbar />
       <div className="container">
-        <h1>Dashboard</h1>
+        <h1>Customer</h1>
       </div>
     </>
   );
 };
 
-export default Dashboard;
+export default Customer;

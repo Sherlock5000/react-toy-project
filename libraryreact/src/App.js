@@ -5,6 +5,7 @@ import React from "react";
 
 import Navbar from "./components/navbar/navbar";
 import Dashboard from "./components/dashboard";
+import Customer from "./components/customer";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Dashboard />
+          <Customer />
         </Switch>
       </Router>
     </>
