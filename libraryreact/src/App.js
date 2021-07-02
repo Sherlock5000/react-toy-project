@@ -6,6 +6,7 @@ import React from "react";
 import Navbar from "./components/navbar/navbar";
 import Dashboard from "./components/dashboard";
 import Customer from "./components/customer";
+import Products from "./components/products";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Customer />
+          <Products />
         </Switch>
       </Router>
     </>
