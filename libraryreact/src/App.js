@@ -9,6 +9,7 @@ import Customer from "./components/customer";
 import Products from "./components/products";
 import Delete from "./components/delete";
 import Login from "./components/login";
+import Register from "./components/register";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Login />
+          <Delete />
         </Switch>
       </Router>
     </>
