@@ -8,6 +8,7 @@ import Dashboard from "./components/dashboard";
 import Customer from "./components/customer";
 import Products from "./components/products";
 import Delete from "./components/delete";
+import Login from "./components/login";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Delete />
+          <Login />
         </Switch>
       </Router>
     </>
