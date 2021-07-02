@@ -1,11 +1,10 @@
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import React from 'react';
+import React from "react";
 
 import Navbar from "./components/navbar/navbar";
-
-
+import Dashboard from "./components/dashboard";
 
 function App() {
   return (
@@ -26,11 +25,11 @@ function App() {
     //   </header>
     // </div>
     <>
-        <Router>
-          <Switch>
-            <Navbar/>
-          </Switch>
-        </Router>
+      <Router>
+        <Switch>
+          <Dashboard />
+        </Switch>
+      </Router>
     </>
   );
 }
