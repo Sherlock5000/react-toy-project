@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/navbar";
 import Dashboard from "./components/dashboard";
 import Customer from "./components/customer";
 import Products from "./components/products";
+import Delete from "./components/delete";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Products />
+          <Delete />
         </Switch>
       </Router>
     </>
