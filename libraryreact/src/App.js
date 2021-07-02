@@ -32,7 +32,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Delete />
+          <Products />
         </Switch>
       </Router>
     </>
