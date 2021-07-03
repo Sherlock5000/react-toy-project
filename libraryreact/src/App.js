@@ -32,7 +32,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Login />
+          <Customer />
         </Switch>
       </Router>
     </>
