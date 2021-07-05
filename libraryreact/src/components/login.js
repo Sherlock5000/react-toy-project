@@ -1,24 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, useHistory } from "react-router-dom";
 import Navbar from "./navbar/navbar";
 import "./login.css";
 
-const Login = () => {
+const Login = ({ setUser }) => {
+  const history = useHistory();
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(username, password);
+    if (username === "user1" && password === "special_password_1") {
+      let path = `/dashboard`;
+      history.push(path);
+    }
+    setUser(username);
+  };
+
   return (
     <>
-      <div class="container h-100" />
-      <div class="d-flex justify-content-center h-100" />
-      <div class="user_card">
-        <div class="d-flex justify-content-center">
+      <div className="container h-100" />
+      <div className="d-flex justify-content-center h-100" />
+      <div className="user_card">
+        <div className="d-flex justify-content-center">
           <h3 id="form-title">LOGIN</h3>
         </div>
-        <div class="d-flex justify-content-center form_container">
+        <div className="d-flex justify-content-center form_container">
           <form method="POST" action="">
             {/* {% csrf_token %} */}
-            <div class="input-group mb-3">
-              <div class="input-group-append">
-                <span class="input-group-text">
-                  <i class="fas fa-user"></i>
+            <div className="input-group mb-3">
+              <div className="input-group-append">
+                <span className="input-group-text">
+                  <i className="fas fa-user"></i>
                 </span>
               </div>
 
@@ -26,14 +42,16 @@ const Login = () => {
                 type="text"
                 name="username"
                 placeholder="Username..."
-                class="form-control"
+                className="form-control"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </div>
 
-            <div class="input-group mb-2">
-              <div class="input-group-append">
-                <span class="input-group-text">
-                  <i class="fas fa-key"></i>
+            <div className="input-group mb-2">
+              <div className="input-group-append">
+                <span className="input-group-text">
+                  <i className="fas fa-key"></i>
                 </span>
               </div>
 
@@ -41,12 +59,19 @@ const Login = () => {
                 type="password"
                 name="password"
                 placeholder="Password..."
-                class="form-control"
+                className="form-control"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
-            <div class="d-flex justify-content-center mt-3 login_container">
-              <input class="btn login_btn" type="submit" value="Login" />
+            <div className="d-flex justify-content-center mt-3 login_container">
+              <input
+                className="btn login_btn"
+                type="submit"
+                value="Login"
+                onClick={handleSubmit}
+              />
             </div>
           </form>
         </div>
@@ -55,12 +80,12 @@ const Login = () => {
 					<p id="messages">{{message}}</p>
 				{% endfor %}			 */}
 
-        <div class="mt-4">
-          <div class="d-flex justify-content-center links">
+        <div className="mt-4">
+          <div className="d-flex justify-content-center links">
             Don't have an account?{" "}
-            <a href="{% url 'register' %}" class="ml-2">
+            <Link to="/register" className="ml-2">
               Sign Up
-            </a>
+            </Link>
           </div>
         </div>
       </div>

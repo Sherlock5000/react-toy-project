@@ -1,27 +1,29 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./navbar/navbar";
+import { Link } from "react-router-dom";
 
-const Customer = () => {
+const Customer = ({ user, bookName, statusName }) => {
   return (
     <>
-      <Navbar />
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-body">
+      <Navbar user={user} />
+      <div className="row">
+        <div className="col-md">
+          <div className="card card-body">
             <h5>Customer:</h5>
             <hr />
-            <a
-              class="btn btn-outline-info  btn-sm btn-block"
-              href="{% url 'create_order' customer.id %}"
+            <Link
+              className="btn btn-outline-info  btn-sm btn-block"
+              //   href="{% url 'create_order' customer.id %}"
+              to="/place_order"
             >
               Place Order
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div class="col-md">
-          <div class="card card-body">
+        <div className="col-md">
+          <div className="card card-body">
             <h5>Contact Information</h5>
             <hr />
             {/* <p>Email: {{customer.email}}</p> */}
@@ -29,8 +31,8 @@ const Customer = () => {
           </div>
         </div>
 
-        <div class="col-md">
-          <div class="card card-body">
+        <div className="col-md">
+          <div className="card card-body">
             <h5>Total Orders</h5>
             <hr />
             <h1 style={{ textAlign: "center", padding: "10px" }}></h1>
@@ -39,23 +41,23 @@ const Customer = () => {
       </div>
 
       <br />
-      {/* <div class="row">
-        <div class="col">
-          <div class="card card-body">
+      {/* <div className="row">
+        <div className="col">
+          <div className="card card-body">
             <form method="get">
               {{myFilter.form}}
 
-              <button class="btn btn-primary" type="submit"></button>
+              <button className="btn btn-primary" type="submit"></button>
             </form>
           </div>
         </div>
       </div> */}
       <br />
 
-      <div class="row">
-        <div class="col-md">
-          <div class="card card-body">
-            <table class="table table-sm">
+      <div className="row">
+        <div className="col-md">
+          <div className="card card-body">
+            <table className="table table-sm">
               <tr>
                 <th>Product</th>
                 <th>Note</th>
@@ -67,16 +69,32 @@ const Customer = () => {
 
               {/* {% for order in orders %} */}
 
-              {/* <tr>
-                            <td>{{order.product}}</td>
-                            <td>{{order.note}}</td>
-                            <td>{{order.date_created}}</td>
-                            <td>{{order.status}}</td>
-                            <td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
+              <tr>
+                <td>{bookName}</td>
+                <td>{}</td>
+                <td>{}</td>
+                <td>{statusName}</td>
+                <td>
+                  <Link
+                    className="btn btn-sm btn-info"
+                    // href="{% url 'update_order' order.id %}"
+                    to="/place_order"
+                  >
+                    Update
+                  </Link>
+                </td>
 
-                            <td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
-                        </tr>
-                        {% endfor %} */}
+                <td>
+                  <Link
+                    className="btn btn-sm btn-danger"
+                    // href="{% url 'delete_order' order.id %}"
+                    to="/delete"
+                  >
+                    Delete
+                  </Link>
+                </td>
+              </tr>
+              {/* {% endfor %} */}
             </table>
           </div>
         </div>
