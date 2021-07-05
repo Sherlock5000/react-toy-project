@@ -14,7 +14,6 @@ const Customer = ({ user, bookName, statusName }) => {
             <hr />
             <Link
               className="btn btn-outline-info  btn-sm btn-block"
-              //   href="{% url 'create_order' customer.id %}"
               to="/place_order"
             >
               Place Order
@@ -26,8 +25,6 @@ const Customer = ({ user, bookName, statusName }) => {
           <div className="card card-body">
             <h5>Contact Information</h5>
             <hr />
-            {/* <p>Email: {{customer.email}}</p> */}
-            {/* <p>Phone: {{customer.phone}}</p> */}
           </div>
         </div>
 
@@ -41,17 +38,6 @@ const Customer = ({ user, bookName, statusName }) => {
       </div>
 
       <br />
-      {/* <div className="row">
-        <div className="col">
-          <div className="card card-body">
-            <form method="get">
-              {{myFilter.form}}
-
-              <button className="btn btn-primary" type="submit"></button>
-            </form>
-          </div>
-        </div>
-      </div> */}
       <br />
 
       <div className="row">
@@ -67,34 +53,23 @@ const Customer = ({ user, bookName, statusName }) => {
                 <th>Remove</th>
               </tr>
 
-              {/* {% for order in orders %} */}
-
               <tr>
                 <td>{bookName}</td>
                 <td>{}</td>
                 <td>{}</td>
                 <td>{statusName}</td>
                 <td>
-                  <Link
-                    className="btn btn-sm btn-info"
-                    // href="{% url 'update_order' order.id %}"
-                    to="/place_order"
-                  >
+                  <Link className="btn btn-sm btn-info" to="/place_order">
                     Update
                   </Link>
                 </td>
 
                 <td>
-                  <Link
-                    className="btn btn-sm btn-danger"
-                    // href="{% url 'delete_order' order.id %}"
-                    to="/delete"
-                  >
+                  <Link className="btn btn-sm btn-danger" to="/delete">
                     Delete
                   </Link>
                 </td>
               </tr>
-              {/* {% endfor %} */}
             </table>
           </div>
         </div>

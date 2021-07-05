@@ -19,7 +19,6 @@ const Products = ({ user }) => {
                 <th>Price</th>
               </tr>
 
-              {/* {% for i in products %} */}
               <tr>
                 <td>Book1</td>
                 <td>Fiction</td>
@@ -35,7 +34,6 @@ const Products = ({ user }) => {
                 <td>Biography</td>
                 <td>15</td>
               </tr>
-              {/* {% endfor %} */}
             </table>
           </div>
         </div>

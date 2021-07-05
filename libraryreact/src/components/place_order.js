@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./navbar/navbar";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const PlaceOrder = ({ user, setBookName, setStatusName }) => {
   const history = useHistory();
@@ -10,7 +10,6 @@ const PlaceOrder = ({ user, setBookName, setStatusName }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(book, status);
     setBookName(book);
     setStatusName(status);
     if (book !== "Choose..." && status !== "Choose...") {
@@ -49,17 +48,6 @@ const PlaceOrder = ({ user, setBookName, setStatusName }) => {
           <option value="Out for Delivery">Out for Delivery</option>
           <option value="Delivered">Delivered</option>
         </select>
-
-        {/* <div className="custom-control custom-checkbox my-1 mr-sm-2">
-          <input
-            type="checkbox"
-            className="custom-control-input"
-            id="customControlInline"
-          />
-          <label className="custom-control-label" for="customControlInline">
-            Remember my preference
-          </label>
-        </div> */}
 
         <button
           type="submit"

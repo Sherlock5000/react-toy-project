@@ -7,7 +7,6 @@ const Delete = ({ user, setUser, setBookName, setStatusName }) => {
   const history = useHistory();
 
   const handleDelete = (e) => {
-    // e.preventDefault();
     let path = `/dashboard`;
     history.push(path);
     setUser("");
@@ -23,7 +22,6 @@ const Delete = ({ user, setUser, setBookName, setStatusName }) => {
             <p>Are you sure you want to delete?</p>
 
             <form action="{% url 'delete_order' item.id  %}" method="POST">
-              {/* {% csrf_token %} */}
               <Link className="btn btn-warning" to="/dashboard">
                 Cancel
               </Link>

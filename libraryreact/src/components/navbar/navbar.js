@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap/dist/js/bootstrap";
 
 import "./navbar.css";
 
 const Navbar = ({ user }) => {
   return (
     <>
-      {/* <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}" > */}
-
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link className="navbar-brand" to="#">
           Navbar

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useHistory } from "react-router-dom";
-import Navbar from "./navbar/navbar";
 import "./login.css";
 
 const Login = ({ setUser }) => {
@@ -12,7 +11,6 @@ const Login = ({ setUser }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(username, password);
     if (username === "user1" && password === "special_password_1") {
       let path = `/dashboard`;
       history.push(path);
@@ -30,7 +28,6 @@ const Login = ({ setUser }) => {
         </div>
         <div className="d-flex justify-content-center form_container">
           <form method="POST" action="">
-            {/* {% csrf_token %} */}
             <div className="input-group mb-3">
               <div className="input-group-append">
                 <span className="input-group-text">
@@ -75,10 +72,6 @@ const Login = ({ setUser }) => {
             </div>
           </form>
         </div>
-
-        {/* {% for message in messages %}
-					<p id="messages">{{message}}</p>
-				{% endfor %}			 */}
 
         <div className="mt-4">
           <div className="d-flex justify-content-center links">

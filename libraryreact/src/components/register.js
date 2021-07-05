@@ -14,7 +14,6 @@ const Register = () => {
             </div>
             <div className="d-flex justify-content-center form_container">
               <form method="POST" action="">
-                {/* {% csrf_token %} */}
                 <div className="input-group mb-3">
                   <div className="input-group-append">
                     <span className="input-group-text">
@@ -78,8 +77,6 @@ const Register = () => {
               </form>
             </div>
 
-            {/* {{form.errors}} */}
-
             <div className="mt-4">
               <div className="d-flex justify-content-center links">
                 Already have an account?{" "}
@@ -91,8 +88,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-
-      {/* <script src="{% static 'js/register.js' %}"></script> */}
     </>
   );
 };

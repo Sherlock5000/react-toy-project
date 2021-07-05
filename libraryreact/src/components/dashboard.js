@@ -21,21 +21,14 @@ const Dashboard = ({ user, bookName, statusName }) => {
                 <th>Phone</th>
               </tr>
 
-              {/* {% for customer in customers %} */}
               <tr>
                 <td>
-                  <Link
-                    className="btn btn-sm btn-info"
-                    // href="{% url 'customer' customer.id %}"
-                    to="/customer"
-                  >
+                  <Link className="btn btn-sm btn-info" to="/customer">
                     View
                   </Link>
                 </td>
                 <td>{user}</td>
-                {/* <td>{{customer.phone}}</td> */}
               </tr>
-              {/* {% endfor %} */}
             </table>
           </div>
         </div>
@@ -54,7 +47,6 @@ const Dashboard = ({ user, bookName, statusName }) => {
                 <th>Remove</th>
               </tr>
 
-              {/* {% for order in orders %} */}
               <tr>
                 <td>{user}</td>
                 <td>{bookName}</td>
@@ -67,16 +59,11 @@ const Dashboard = ({ user, bookName, statusName }) => {
                 </td>
 
                 <td>
-                  <Link
-                    className="btn btn-sm btn-danger"
-                    // href="{% url 'delete_order' order.id %}"
-                    to="/delete"
-                  >
+                  <Link className="btn btn-sm btn-danger" to="/delete">
                     Delete
                   </Link>
                 </td>
               </tr>
-              {/* {% endfor %} */}
             </table>
           </div>
         </div>
